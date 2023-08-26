@@ -29,172 +29,205 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.playergroupBox = new System.Windows.Forms.GroupBox();
-            this.paperPictureBox = new System.Windows.Forms.PictureBox();
-            this.rockPictureBox = new System.Windows.Forms.PictureBox();
-            this.scissorsPictureBox = new System.Windows.Forms.PictureBox();
-            this.aigroupBox = new System.Windows.Forms.GroupBox();
-            this.aipaperPictureBox = new System.Windows.Forms.PictureBox();
-            this.airockPictureBox = new System.Windows.Forms.PictureBox();
-            this.aiscissorsPictureBox = new System.Windows.Forms.PictureBox();
-            this.outcomegroupBox = new System.Windows.Forms.GroupBox();
-            this.versusLabel = new System.Windows.Forms.Label();
-            this.shootButton = new System.Windows.Forms.Button();
-            this.rematchButton = new System.Windows.Forms.Button();
-            this.playergroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paperPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rockPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scissorsPictureBox)).BeginInit();
-            this.aigroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aipaperPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.airockPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aiscissorsPictureBox)).BeginInit();
-            this.SuspendLayout();
+            playergroupBox = new GroupBox();
+            paperPictureBox = new PictureBox();
+            rockPictureBox = new PictureBox();
+            scissorsPictureBox = new PictureBox();
+            aigroupBox = new GroupBox();
+            aipaperPictureBox = new PictureBox();
+            airockPictureBox = new PictureBox();
+            aiscissorsPictureBox = new PictureBox();
+            outcomegroupBox = new GroupBox();
+            loseLabel = new Label();
+            winLabel = new Label();
+            versusLabel = new Label();
+            rematchButton = new Button();
+            drawLabel = new Label();
+            playergroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)paperPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rockPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)scissorsPictureBox).BeginInit();
+            aigroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)aipaperPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)airockPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)aiscissorsPictureBox).BeginInit();
+            outcomegroupBox.SuspendLayout();
+            SuspendLayout();
             // 
             // playergroupBox
             // 
-            this.playergroupBox.Controls.Add(this.paperPictureBox);
-            this.playergroupBox.Controls.Add(this.rockPictureBox);
-            this.playergroupBox.Controls.Add(this.scissorsPictureBox);
-            this.playergroupBox.Location = new System.Drawing.Point(206, 104);
-            this.playergroupBox.Name = "playergroupBox";
-            this.playergroupBox.Size = new System.Drawing.Size(200, 100);
-            this.playergroupBox.TabIndex = 0;
-            this.playergroupBox.TabStop = false;
-            this.playergroupBox.Text = "You";
+            playergroupBox.Controls.Add(paperPictureBox);
+            playergroupBox.Controls.Add(rockPictureBox);
+            playergroupBox.Controls.Add(scissorsPictureBox);
+            playergroupBox.Location = new Point(206, 104);
+            playergroupBox.Name = "playergroupBox";
+            playergroupBox.Size = new Size(200, 100);
+            playergroupBox.TabIndex = 0;
+            playergroupBox.TabStop = false;
+            playergroupBox.Text = "You";
             // 
             // paperPictureBox
             // 
-            this.paperPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("paperPictureBox.Image")));
-            this.paperPictureBox.Location = new System.Drawing.Point(71, 37);
-            this.paperPictureBox.Name = "paperPictureBox";
-            this.paperPictureBox.Size = new System.Drawing.Size(45, 35);
-            this.paperPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.paperPictureBox.TabIndex = 2;
-            this.paperPictureBox.TabStop = false;
+            paperPictureBox.Image = (Image)resources.GetObject("paperPictureBox.Image");
+            paperPictureBox.Location = new Point(71, 37);
+            paperPictureBox.Name = "paperPictureBox";
+            paperPictureBox.Size = new Size(45, 35);
+            paperPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            paperPictureBox.TabIndex = 2;
+            paperPictureBox.TabStop = false;
+            paperPictureBox.Click += paperPictureBox_Click;
             // 
             // rockPictureBox
             // 
-            this.rockPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("rockPictureBox.Image")));
-            this.rockPictureBox.Location = new System.Drawing.Point(6, 39);
-            this.rockPictureBox.Name = "rockPictureBox";
-            this.rockPictureBox.Size = new System.Drawing.Size(49, 33);
-            this.rockPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rockPictureBox.TabIndex = 1;
-            this.rockPictureBox.TabStop = false;
+            rockPictureBox.Image = (Image)resources.GetObject("rockPictureBox.Image");
+            rockPictureBox.Location = new Point(6, 39);
+            rockPictureBox.Name = "rockPictureBox";
+            rockPictureBox.Size = new Size(49, 33);
+            rockPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            rockPictureBox.TabIndex = 1;
+            rockPictureBox.TabStop = false;
+            rockPictureBox.Click += rockPictureBox_Click;
             // 
             // scissorsPictureBox
             // 
-            this.scissorsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("scissorsPictureBox.Image")));
-            this.scissorsPictureBox.Location = new System.Drawing.Point(137, 37);
-            this.scissorsPictureBox.Name = "scissorsPictureBox";
-            this.scissorsPictureBox.Size = new System.Drawing.Size(36, 38);
-            this.scissorsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.scissorsPictureBox.TabIndex = 0;
-            this.scissorsPictureBox.TabStop = false;
+            scissorsPictureBox.Image = (Image)resources.GetObject("scissorsPictureBox.Image");
+            scissorsPictureBox.Location = new Point(137, 37);
+            scissorsPictureBox.Name = "scissorsPictureBox";
+            scissorsPictureBox.Size = new Size(36, 38);
+            scissorsPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            scissorsPictureBox.TabIndex = 0;
+            scissorsPictureBox.TabStop = false;
+            scissorsPictureBox.Click += scissorsPictureBox_Click;
             // 
             // aigroupBox
             // 
-            this.aigroupBox.Controls.Add(this.aipaperPictureBox);
-            this.aigroupBox.Controls.Add(this.airockPictureBox);
-            this.aigroupBox.Controls.Add(this.aiscissorsPictureBox);
-            this.aigroupBox.Location = new System.Drawing.Point(611, 104);
-            this.aigroupBox.Name = "aigroupBox";
-            this.aigroupBox.Size = new System.Drawing.Size(200, 100);
-            this.aigroupBox.TabIndex = 1;
-            this.aigroupBox.TabStop = false;
-            this.aigroupBox.Text = "Computer";
+            aigroupBox.Controls.Add(aipaperPictureBox);
+            aigroupBox.Controls.Add(airockPictureBox);
+            aigroupBox.Controls.Add(aiscissorsPictureBox);
+            aigroupBox.Location = new Point(611, 104);
+            aigroupBox.Name = "aigroupBox";
+            aigroupBox.Size = new Size(200, 100);
+            aigroupBox.TabIndex = 1;
+            aigroupBox.TabStop = false;
+            aigroupBox.Text = "Computer";
             // 
             // aipaperPictureBox
             // 
-            this.aipaperPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("aipaperPictureBox.Image")));
-            this.aipaperPictureBox.Location = new System.Drawing.Point(82, 37);
-            this.aipaperPictureBox.Name = "aipaperPictureBox";
-            this.aipaperPictureBox.Size = new System.Drawing.Size(45, 35);
-            this.aipaperPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.aipaperPictureBox.TabIndex = 5;
-            this.aipaperPictureBox.TabStop = false;
+            aipaperPictureBox.Image = (Image)resources.GetObject("aipaperPictureBox.Image");
+            aipaperPictureBox.Location = new Point(82, 37);
+            aipaperPictureBox.Name = "aipaperPictureBox";
+            aipaperPictureBox.Size = new Size(45, 35);
+            aipaperPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            aipaperPictureBox.TabIndex = 5;
+            aipaperPictureBox.TabStop = false;
             // 
             // airockPictureBox
             // 
-            this.airockPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("airockPictureBox.Image")));
-            this.airockPictureBox.Location = new System.Drawing.Point(17, 39);
-            this.airockPictureBox.Name = "airockPictureBox";
-            this.airockPictureBox.Size = new System.Drawing.Size(49, 33);
-            this.airockPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.airockPictureBox.TabIndex = 4;
-            this.airockPictureBox.TabStop = false;
+            airockPictureBox.Image = (Image)resources.GetObject("airockPictureBox.Image");
+            airockPictureBox.Location = new Point(17, 39);
+            airockPictureBox.Name = "airockPictureBox";
+            airockPictureBox.Size = new Size(49, 33);
+            airockPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            airockPictureBox.TabIndex = 4;
+            airockPictureBox.TabStop = false;
             // 
             // aiscissorsPictureBox
             // 
-            this.aiscissorsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("aiscissorsPictureBox.Image")));
-            this.aiscissorsPictureBox.Location = new System.Drawing.Point(148, 37);
-            this.aiscissorsPictureBox.Name = "aiscissorsPictureBox";
-            this.aiscissorsPictureBox.Size = new System.Drawing.Size(36, 38);
-            this.aiscissorsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.aiscissorsPictureBox.TabIndex = 3;
-            this.aiscissorsPictureBox.TabStop = false;
+            aiscissorsPictureBox.Image = (Image)resources.GetObject("aiscissorsPictureBox.Image");
+            aiscissorsPictureBox.Location = new Point(148, 37);
+            aiscissorsPictureBox.Name = "aiscissorsPictureBox";
+            aiscissorsPictureBox.Size = new Size(36, 38);
+            aiscissorsPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            aiscissorsPictureBox.TabIndex = 3;
+            aiscissorsPictureBox.TabStop = false;
             // 
             // outcomegroupBox
             // 
-            this.outcomegroupBox.Location = new System.Drawing.Point(409, 257);
-            this.outcomegroupBox.Name = "outcomegroupBox";
-            this.outcomegroupBox.Size = new System.Drawing.Size(200, 100);
-            this.outcomegroupBox.TabIndex = 2;
-            this.outcomegroupBox.TabStop = false;
+            outcomegroupBox.Controls.Add(drawLabel);
+            outcomegroupBox.Controls.Add(loseLabel);
+            outcomegroupBox.Controls.Add(winLabel);
+            outcomegroupBox.Location = new Point(409, 257);
+            outcomegroupBox.Name = "outcomegroupBox";
+            outcomegroupBox.Size = new Size(200, 100);
+            outcomegroupBox.TabIndex = 2;
+            outcomegroupBox.TabStop = false;
+            // 
+            // loseLabel
+            // 
+            loseLabel.AutoSize = true;
+            loseLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            loseLabel.Location = new Point(32, 28);
+            loseLabel.Name = "loseLabel";
+            loseLabel.Size = new Size(146, 45);
+            loseLabel.TabIndex = 1;
+            loseLabel.Text = "You Lose";
+            loseLabel.Visible = false;
+            // 
+            // winLabel
+            // 
+            winLabel.AutoSize = true;
+            winLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            winLabel.Location = new Point(31, 32);
+            winLabel.Name = "winLabel";
+            winLabel.Size = new Size(137, 45);
+            winLabel.TabIndex = 0;
+            winLabel.Text = "You Win";
+            winLabel.Visible = false;
             // 
             // versusLabel
             // 
-            this.versusLabel.AutoSize = true;
-            this.versusLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.versusLabel.Location = new System.Drawing.Point(487, 110);
-            this.versusLabel.Name = "versusLabel";
-            this.versusLabel.Size = new System.Drawing.Size(39, 30);
-            this.versusLabel.TabIndex = 3;
-            this.versusLabel.Text = "VS";
-            // 
-            // shootButton
-            // 
-            this.shootButton.Location = new System.Drawing.Point(469, 143);
-            this.shootButton.Name = "shootButton";
-            this.shootButton.Size = new System.Drawing.Size(75, 23);
-            this.shootButton.TabIndex = 4;
-            this.shootButton.Text = "Shoot";
-            this.shootButton.UseVisualStyleBackColor = true;
+            versusLabel.AutoSize = true;
+            versusLabel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            versusLabel.Location = new Point(487, 110);
+            versusLabel.Name = "versusLabel";
+            versusLabel.Size = new Size(39, 30);
+            versusLabel.TabIndex = 3;
+            versusLabel.Text = "VS";
             // 
             // rematchButton
             // 
-            this.rematchButton.Location = new System.Drawing.Point(469, 172);
-            this.rematchButton.Name = "rematchButton";
-            this.rematchButton.Size = new System.Drawing.Size(75, 23);
-            this.rematchButton.TabIndex = 5;
-            this.rematchButton.Text = "Rematch";
-            this.rematchButton.UseVisualStyleBackColor = true;
+            rematchButton.Location = new Point(469, 172);
+            rematchButton.Name = "rematchButton";
+            rematchButton.Size = new Size(75, 23);
+            rematchButton.TabIndex = 5;
+            rematchButton.Text = "Rematch";
+            rematchButton.UseVisualStyleBackColor = true;
+            // 
+            // drawLabel
+            // 
+            drawLabel.AutoSize = true;
+            drawLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            drawLabel.Location = new Point(60, 32);
+            drawLabel.Name = "drawLabel";
+            drawLabel.Size = new Size(92, 45);
+            drawLabel.TabIndex = 6;
+            drawLabel.Text = "Draw";
+            drawLabel.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 478);
-            this.Controls.Add(this.rematchButton);
-            this.Controls.Add(this.shootButton);
-            this.Controls.Add(this.versusLabel);
-            this.Controls.Add(this.outcomegroupBox);
-            this.Controls.Add(this.aigroupBox);
-            this.Controls.Add(this.playergroupBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.playergroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.paperPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rockPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scissorsPictureBox)).EndInit();
-            this.aigroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.aipaperPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.airockPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aiscissorsPictureBox)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1004, 478);
+            Controls.Add(rematchButton);
+            Controls.Add(versusLabel);
+            Controls.Add(outcomegroupBox);
+            Controls.Add(aigroupBox);
+            Controls.Add(playergroupBox);
+            Name = "Form1";
+            Text = "Form1";
+            playergroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)paperPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rockPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)scissorsPictureBox).EndInit();
+            aigroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)aipaperPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)airockPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)aiscissorsPictureBox).EndInit();
+            outcomegroupBox.ResumeLayout(false);
+            outcomegroupBox.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -209,7 +242,9 @@
         private PictureBox aiscissorsPictureBox;
         private GroupBox outcomegroupBox;
         private Label versusLabel;
-        private Button shootButton;
         private Button rematchButton;
+        private Label winLabel;
+        private Label loseLabel;
+        private Label drawLabel;
     }
 }
