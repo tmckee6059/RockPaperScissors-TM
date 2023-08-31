@@ -61,7 +61,8 @@
             playergroupBox.Controls.Add(paperPictureBox);
             playergroupBox.Controls.Add(rockPictureBox);
             playergroupBox.Controls.Add(scissorsPictureBox);
-            playergroupBox.Location = new Point(206, 104);
+            playergroupBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            playergroupBox.Location = new Point(34, 110);
             playergroupBox.Name = "playergroupBox";
             playergroupBox.Size = new Size(200, 100);
             playergroupBox.TabIndex = 0;
@@ -106,12 +107,13 @@
             aigroupBox.Controls.Add(aipaperPictureBox);
             aigroupBox.Controls.Add(airockPictureBox);
             aigroupBox.Controls.Add(aiscissorsPictureBox);
-            aigroupBox.Location = new Point(611, 104);
+            aigroupBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            aigroupBox.Location = new Point(439, 110);
             aigroupBox.Name = "aigroupBox";
             aigroupBox.Size = new Size(200, 100);
             aigroupBox.TabIndex = 1;
             aigroupBox.TabStop = false;
-            aigroupBox.Text = "Computer";
+            aigroupBox.Text = "AI";
             // 
             // aipaperPictureBox
             // 
@@ -148,7 +150,7 @@
             outcomegroupBox.Controls.Add(drawLabel);
             outcomegroupBox.Controls.Add(loseLabel);
             outcomegroupBox.Controls.Add(winLabel);
-            outcomegroupBox.Location = new Point(409, 257);
+            outcomegroupBox.Location = new Point(237, 263);
             outcomegroupBox.Name = "outcomegroupBox";
             outcomegroupBox.Size = new Size(200, 100);
             outcomegroupBox.TabIndex = 2;
@@ -192,7 +194,7 @@
             // 
             versusLabel.AutoSize = true;
             versusLabel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            versusLabel.Location = new Point(487, 110);
+            versusLabel.Location = new Point(315, 116);
             versusLabel.Name = "versusLabel";
             versusLabel.Size = new Size(39, 30);
             versusLabel.TabIndex = 3;
@@ -200,7 +202,7 @@
             // 
             // rematchButton
             // 
-            rematchButton.Location = new Point(469, 172);
+            rematchButton.Location = new Point(297, 178);
             rematchButton.Name = "rematchButton";
             rematchButton.Size = new Size(75, 23);
             rematchButton.TabIndex = 5;
@@ -211,24 +213,27 @@
             // wintrackerLabel
             // 
             wintrackerLabel.AutoSize = true;
-            wintrackerLabel.Location = new Point(278, 90);
+            wintrackerLabel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            wintrackerLabel.Location = new Point(106, 96);
             wintrackerLabel.Name = "wintrackerLabel";
-            wintrackerLabel.Size = new Size(0, 15);
+            wintrackerLabel.Size = new Size(0, 30);
             wintrackerLabel.TabIndex = 6;
             // 
             // aiwintrackerLabel
             // 
             aiwintrackerLabel.AutoSize = true;
-            aiwintrackerLabel.Location = new Point(707, 94);
+            aiwintrackerLabel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            aiwintrackerLabel.Location = new Point(508, 96);
             aiwintrackerLabel.Name = "aiwintrackerLabel";
-            aiwintrackerLabel.Size = new Size(0, 15);
+            aiwintrackerLabel.Size = new Size(0, 30);
             aiwintrackerLabel.TabIndex = 7;
             // 
             // GameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1004, 478);
+            BackColor = Color.LightSkyBlue;
+            ClientSize = new Size(671, 478);
             Controls.Add(aiwintrackerLabel);
             Controls.Add(wintrackerLabel);
             Controls.Add(rematchButton);
@@ -236,6 +241,7 @@
             Controls.Add(outcomegroupBox);
             Controls.Add(aigroupBox);
             Controls.Add(playergroupBox);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "GameForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Rock, Paper, or Scissors?";
