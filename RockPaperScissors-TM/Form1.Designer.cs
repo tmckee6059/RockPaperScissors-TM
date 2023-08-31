@@ -72,7 +72,7 @@
             // paperPictureBox
             // 
             paperPictureBox.Image = (Image)resources.GetObject("paperPictureBox.Image");
-            paperPictureBox.Location = new Point(71, 37);
+            paperPictureBox.Location = new Point(71, 38);
             paperPictureBox.Name = "paperPictureBox";
             paperPictureBox.Size = new Size(45, 35);
             paperPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -94,7 +94,7 @@
             // scissorsPictureBox
             // 
             scissorsPictureBox.Image = (Image)resources.GetObject("scissorsPictureBox.Image");
-            scissorsPictureBox.Location = new Point(137, 37);
+            scissorsPictureBox.Location = new Point(137, 38);
             scissorsPictureBox.Name = "scissorsPictureBox";
             scissorsPictureBox.Size = new Size(36, 38);
             scissorsPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -118,7 +118,7 @@
             // aipaperPictureBox
             // 
             aipaperPictureBox.Image = (Image)resources.GetObject("aipaperPictureBox.Image");
-            aipaperPictureBox.Location = new Point(82, 37);
+            aipaperPictureBox.Location = new Point(82, 38);
             aipaperPictureBox.Name = "aipaperPictureBox";
             aipaperPictureBox.Size = new Size(45, 35);
             aipaperPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@
             // aiscissorsPictureBox
             // 
             aiscissorsPictureBox.Image = (Image)resources.GetObject("aiscissorsPictureBox.Image");
-            aiscissorsPictureBox.Location = new Point(148, 37);
+            aiscissorsPictureBox.Location = new Point(148, 38);
             aiscissorsPictureBox.Name = "aiscissorsPictureBox";
             aiscissorsPictureBox.Size = new Size(36, 38);
             aiscissorsPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -150,7 +150,7 @@
             outcomegroupBox.Controls.Add(drawLabel);
             outcomegroupBox.Controls.Add(loseLabel);
             outcomegroupBox.Controls.Add(winLabel);
-            outcomegroupBox.Location = new Point(237, 263);
+            outcomegroupBox.Location = new Point(237, 262);
             outcomegroupBox.Name = "outcomegroupBox";
             outcomegroupBox.Size = new Size(200, 100);
             outcomegroupBox.TabIndex = 2;
