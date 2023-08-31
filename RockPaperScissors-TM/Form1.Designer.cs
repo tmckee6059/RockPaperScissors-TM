@@ -61,7 +61,7 @@
             playergroupBox.Controls.Add(paperPictureBox);
             playergroupBox.Controls.Add(rockPictureBox);
             playergroupBox.Controls.Add(scissorsPictureBox);
-            playergroupBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            playergroupBox.Font = new Font("Rockwell", 14F, FontStyle.Regular, GraphicsUnit.Point);
             playergroupBox.Location = new Point(34, 110);
             playergroupBox.Name = "playergroupBox";
             playergroupBox.Size = new Size(200, 100);
@@ -107,7 +107,7 @@
             aigroupBox.Controls.Add(aipaperPictureBox);
             aigroupBox.Controls.Add(airockPictureBox);
             aigroupBox.Controls.Add(aiscissorsPictureBox);
-            aigroupBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            aigroupBox.Font = new Font("Rockwell", 14F, FontStyle.Regular, GraphicsUnit.Point);
             aigroupBox.Location = new Point(439, 110);
             aigroupBox.Name = "aigroupBox";
             aigroupBox.Size = new Size(200, 100);
@@ -159,10 +159,10 @@
             // drawLabel
             // 
             drawLabel.AutoSize = true;
-            drawLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            drawLabel.Font = new Font("Rockwell", 24F, FontStyle.Regular, GraphicsUnit.Point);
             drawLabel.Location = new Point(60, 32);
             drawLabel.Name = "drawLabel";
-            drawLabel.Size = new Size(92, 45);
+            drawLabel.Size = new Size(93, 36);
             drawLabel.TabIndex = 6;
             drawLabel.Text = "Draw";
             drawLabel.Visible = false;
@@ -170,10 +170,10 @@
             // loseLabel
             // 
             loseLabel.AutoSize = true;
-            loseLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            loseLabel.Font = new Font("Rockwell", 24F, FontStyle.Regular, GraphicsUnit.Point);
             loseLabel.Location = new Point(32, 28);
             loseLabel.Name = "loseLabel";
-            loseLabel.Size = new Size(146, 45);
+            loseLabel.Size = new Size(148, 36);
             loseLabel.TabIndex = 1;
             loseLabel.Text = "You Lose";
             loseLabel.Visible = false;
@@ -182,10 +182,10 @@
             // winLabel
             // 
             winLabel.AutoSize = true;
-            winLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            winLabel.Font = new Font("Rockwell", 24F, FontStyle.Regular, GraphicsUnit.Point);
             winLabel.Location = new Point(31, 32);
             winLabel.Name = "winLabel";
-            winLabel.Size = new Size(137, 45);
+            winLabel.Size = new Size(138, 36);
             winLabel.TabIndex = 0;
             winLabel.Text = "You Win";
             winLabel.Visible = false;
@@ -194,7 +194,7 @@
             // 
             versusLabel.AutoSize = true;
             versusLabel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            versusLabel.Location = new Point(315, 116);
+            versusLabel.Location = new Point(316, 127);
             versusLabel.Name = "versusLabel";
             versusLabel.Size = new Size(39, 30);
             versusLabel.TabIndex = 3;
@@ -202,9 +202,10 @@
             // 
             // rematchButton
             // 
-            rematchButton.Location = new Point(297, 178);
+            rematchButton.Font = new Font("Rockwell", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            rematchButton.Location = new Point(282, 178);
             rematchButton.Name = "rematchButton";
-            rematchButton.Size = new Size(75, 23);
+            rematchButton.Size = new Size(107, 32);
             rematchButton.TabIndex = 5;
             rematchButton.Text = "Rematch";
             rematchButton.UseVisualStyleBackColor = true;
