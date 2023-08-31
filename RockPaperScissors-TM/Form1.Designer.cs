@@ -1,6 +1,6 @@
 ﻿namespace RockPaperScissors_TM
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             playergroupBox = new GroupBox();
             paperPictureBox = new PictureBox();
             rockPictureBox = new PictureBox();
@@ -38,11 +38,13 @@
             airockPictureBox = new PictureBox();
             aiscissorsPictureBox = new PictureBox();
             outcomegroupBox = new GroupBox();
+            drawLabel = new Label();
             loseLabel = new Label();
             winLabel = new Label();
             versusLabel = new Label();
             rematchButton = new Button();
-            drawLabel = new Label();
+            wintrackerLabel = new Label();
+            aiwintrackerLabel = new Label();
             playergroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)paperPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rockPictureBox).BeginInit();
@@ -152,6 +154,17 @@
             outcomegroupBox.TabIndex = 2;
             outcomegroupBox.TabStop = false;
             // 
+            // drawLabel
+            // 
+            drawLabel.AutoSize = true;
+            drawLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            drawLabel.Location = new Point(60, 32);
+            drawLabel.Name = "drawLabel";
+            drawLabel.Size = new Size(92, 45);
+            drawLabel.TabIndex = 6;
+            drawLabel.Text = "Draw";
+            drawLabel.Visible = false;
+            // 
             // loseLabel
             // 
             loseLabel.AutoSize = true;
@@ -162,6 +175,7 @@
             loseLabel.TabIndex = 1;
             loseLabel.Text = "You Lose";
             loseLabel.Visible = false;
+            loseLabel.Click += loseLabel_Click;
             // 
             // winLabel
             // 
@@ -192,30 +206,39 @@
             rematchButton.TabIndex = 5;
             rematchButton.Text = "Rematch";
             rematchButton.UseVisualStyleBackColor = true;
+            rematchButton.Click += rematchButton_Click;
             // 
-            // drawLabel
+            // wintrackerLabel
             // 
-            drawLabel.AutoSize = true;
-            drawLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            drawLabel.Location = new Point(60, 32);
-            drawLabel.Name = "drawLabel";
-            drawLabel.Size = new Size(92, 45);
-            drawLabel.TabIndex = 6;
-            drawLabel.Text = "Draw";
-            drawLabel.Visible = false;
+            wintrackerLabel.AutoSize = true;
+            wintrackerLabel.Location = new Point(278, 90);
+            wintrackerLabel.Name = "wintrackerLabel";
+            wintrackerLabel.Size = new Size(0, 15);
+            wintrackerLabel.TabIndex = 6;
             // 
-            // Form1
+            // aiwintrackerLabel
+            // 
+            aiwintrackerLabel.AutoSize = true;
+            aiwintrackerLabel.Location = new Point(707, 94);
+            aiwintrackerLabel.Name = "aiwintrackerLabel";
+            aiwintrackerLabel.Size = new Size(0, 15);
+            aiwintrackerLabel.TabIndex = 7;
+            // 
+            // GameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 478);
+            Controls.Add(aiwintrackerLabel);
+            Controls.Add(wintrackerLabel);
             Controls.Add(rematchButton);
             Controls.Add(versusLabel);
             Controls.Add(outcomegroupBox);
             Controls.Add(aigroupBox);
             Controls.Add(playergroupBox);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "GameForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Rock, Paper, or Scissors?";
             playergroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)paperPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rockPictureBox).EndInit();
@@ -246,5 +269,7 @@
         private Label winLabel;
         private Label loseLabel;
         private Label drawLabel;
+        private Label wintrackerLabel;
+        private Label aiwintrackerLabel;
     }
 }
